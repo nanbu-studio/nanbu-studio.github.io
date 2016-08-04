@@ -1,0 +1,17 @@
+language: node_js
+node_js: ['6.1']
+before_script:
+  - npm install -g bower
+  - npm install -g harp
+  - git checkout master
+  - cd _harp
+  - bower install
+  - npm install
+  - cd ..
+script:
+  - harp compile _harp ./
+  - git add -A
+  - git commit -m "Updating static website files"
+  - git push
+branches:
+  only: develop
