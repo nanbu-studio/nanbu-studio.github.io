@@ -1,0 +1,14 @@
+mixin game-list-item(slug, post)
+  .game-list__item.row
+    .col.s5
+      .game-list__item__image(style='background-image: url(/games/#{ slug }/cover.png); background-size: cover')
+    .col.s7
+      .game-list__item__text
+          h3= post.title
+          != partial('games/' + slug + '/abstract')
+          p.game-list__item__more
+            | Descargar:
+            each download, download_id in post.downloads
+              a(href=download.url)= ' ' + download.name
+          //-p.game-list__item__more
+            a(href='/games/#{ slug }/page') Leer más

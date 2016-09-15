@@ -1,0 +1,11 @@
+{
+  "dreams": {
+    "title": "¡Que no se despierte!",
+    "downloads": {
+      "android" : {
+        "name": "Android (Prototipo)",
+        "url" : "https://dl.dropboxusercontent.com/u/22922129/builds/dreams.apk"
+      }
+    }
+  }
+}
