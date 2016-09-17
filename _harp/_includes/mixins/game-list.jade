@@ -1,8 +1,8 @@
 mixin game-list-item(slug, post)
   .game-list__item.row
-    .col.s5
+    .col.s12.l5
       .game-list__item__image(style='background-image: url(/games/#{ slug }/cover.png); background-size: cover')
-    .col.s7
+    .col.s12.l7
       .game-list__item__text
           h3= post.title
           != partial('games/' + slug + '/abstract')
