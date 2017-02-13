@@ -1,0 +1,37 @@
+<section id="games" class="games text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="section-heading">Meet Our Games!</h2>
+                <p>We are taking our first baby steps into game development.
+                   Here you will find some prototypes we have been working on.
+                   Enjoy!</p>
+                {% comment %}
+                <hr>
+                {% if site.data-ad-client %}
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- jekynewage -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="{{ site.data-ad-client }}"
+                    data-ad-slot="{{ site.data-ad-slot }}"
+                    data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                {% endif %}
+                {%endcomment %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="no-padding" id="portfolio">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+          {% for game in site.games %}
+            {% include portfolio__game.html game=game %}
+          {% endfor %}
+        </div>
+    </div>
+</section>
