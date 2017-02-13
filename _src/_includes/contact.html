@@ -1,0 +1,31 @@
+
+<section id="contact" class="contact bg-primary">
+    <div class="container">
+        <h2>Get in Touch!</i></h2>
+        <p>Join our social networks to keep updated with our latest developments.</p>
+        <br/><br/>
+        <ul class="list-inline list-social">
+            {% for network in site.social %}
+            <li class="social-{{ network.title }}">
+                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <p>&copy; 2017 Nanbu GameStudio. All Rights Reserved.</p>
+        {% comment %}<ul class="list-inline">
+            <li>
+                <a href="#">Privacy</a>
+            </li>
+            <li>
+                <a href="#">Terms</a>
+            </li>
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+        </ul>{% endcomment %}
+    </div>
+</footer>
