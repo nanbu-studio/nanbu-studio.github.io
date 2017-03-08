@@ -1,6 +1,7 @@
 <div class="col-lg-4 col-sm-6">
     {% assign background_image = '/games/' | append: include.game.handle | append: '/' | append: include.game.featured_image %}
-    <a class="portfolio-box" style="background-image: url({{ background_image }})">
+    <a class="portfolio-box" style="background-image: url({{ background_image }})"
+       href="/games/{{include.game.handle}}">
         <div class="portfolio-box-caption">
             <div class="portfolio-box-caption-content">
                 <div class="project-category text-faded">

@@ -13,11 +13,11 @@ url: "https://jekynewage.github.io" # the base hostname & protocol for your site
 
 nav_items:
   - label: Games
-    url: '#games'
+    url: '/#games'
   - label: Our Team
-    url: '#our-team'
+    url: '/#our-team'
   - label: Contact
-    url: '#contact'
+    url: '/#contact'
 
 google_analytics: UA-91886085-1
 #addthis_id: ra-5644da281510c62f
@@ -35,7 +35,8 @@ social:
 # Jekyll configuration
 
 collections:
-  - games
+  games:
+    output: true
 
 # Build settings
 markdown: kramdown

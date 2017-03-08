@@ -154,6 +154,12 @@ p {
   }
 }
 
+.navbar-opaque {
+  &.affix-top {
+    background-color: #333;
+  }
+}
+
 header {
   position: relative;
   width: 100%;
@@ -195,6 +201,10 @@ header {
       border-radius: 3px;
     }
   }
+}
+
+.device-container--vspacing {
+  margin: 30px 0px;
 }
 
 @media (min-width: 768px) {
@@ -252,6 +262,56 @@ section {
       }
     }
   }
+  &.game-detail {
+
+    .game-detail__versions h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .game-item {
+      text-align: center;
+      margin-bottom: 100px;
+      h3 {
+        font-size: 30px;
+      }
+      i {
+        font-size: 80px;
+        background: -webkit-linear-gradient(to left, $head-primary, $head-secondary);
+        background: linear-gradient(to left, $head-primary, $head-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  &.game-detail--portrait {
+    .section-heading {
+      margin-bottom: 60px;
+    }
+
+    .game-detail__items {
+      margin-top: 100px;
+    }
+
+    .device-container {
+      max-width: 300px;
+    }
+
+    &.game-detail--no-features {
+      .device-container {
+        margin: auto;
+      }
+    }
+  }
+
+  &.game-detail--landscape {
+    .device-container {
+      margin-bottom: 60px;
+      margin-top: 40px;
+    }
+  }
+
   &.features {
     .section-heading {
       margin-bottom: 100px;
@@ -262,6 +322,7 @@ section {
         margin-bottom: 0;
       }
     }
+
     // section-post-heading fatto da Antonio
     .section-post-heading {
       margin-bottom: 100px;
@@ -428,7 +489,6 @@ section {
     }
   }
 }
-
 
 .our-team {
   position: relative;
@@ -643,5 +703,33 @@ body {
     .subheading {
       font-size: 30px;
     }
+  }
+}
+
+.download-button {
+  display: inline-block;
+  width: 202.5px;
+  height: 60px;
+  background-repeat: no-repeat;
+}
+
+.download-button--android {
+  background-image: url('/img/badges/android-badge.svg');
+}
+
+.game-detail__versions {
+  text-align: right;
+
+  .game-detail--landscape & {
+    text-align: center;
+  }
+}
+
+.game-detail--no-features.game-detail--portrait {
+  .game-detail__items {
+    margin-top: 50px;
+  }
+  .game-detail__versions {
+    text-align: center;
   }
 }
