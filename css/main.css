@@ -114,6 +114,9 @@ p {
           color: #222222; }
         .navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover {
           color: #fdcc52; } }
+.navbar-opaque.affix-top {
+  background-color: #333; }
+
 header {
   position: relative;
   width: 100%;
@@ -148,6 +151,9 @@ header {
     margin: 0 auto 100px; }
     header .device-container .screen img {
       border-radius: 3px; }
+
+.device-container--vspacing {
+  margin: 30px 0px; }
 
 @media (min-width: 768px) {
   header {
@@ -188,6 +194,31 @@ section {
         margin-bottom: 0; }
       section.download .badges .badge-link img {
         height: 60px; }
+  section.game-detail .game-detail__versions h3 {
+    font-size: 30px;
+    margin-bottom: 20px; }
+  section.game-detail .game-item {
+    text-align: center;
+    margin-bottom: 100px; }
+    section.game-detail .game-item h3 {
+      font-size: 30px; }
+    section.game-detail .game-item i {
+      font-size: 80px;
+      background: -webkit-linear-gradient(to left, #fab14b, #f28f06);
+      background: linear-gradient(to left, #fab14b, #f28f06);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+  section.game-detail--portrait .section-heading {
+    margin-bottom: 60px; }
+  section.game-detail--portrait .game-detail__items {
+    margin-top: 100px; }
+  section.game-detail--portrait .device-container {
+    max-width: 300px; }
+  section.game-detail--portrait.game-detail--no-features .device-container {
+    margin: auto; }
+  section.game-detail--landscape .device-container {
+    margin-bottom: 60px;
+    margin-top: 40px; }
   section.features .section-heading {
     margin-bottom: 100px; }
     section.features .section-heading h2 {
@@ -458,6 +489,25 @@ body {
     font-size: 55px; }
   .intro-header .post-heading .subheading {
     font-size: 30px; } }
+.download-button {
+  display: inline-block;
+  width: 202.5px;
+  height: 60px;
+  background-repeat: no-repeat; }
+
+.download-button--android {
+  background-image: url("/img/badges/android-badge.svg"); }
+
+.game-detail__versions {
+  text-align: right; }
+  .game-detail--landscape .game-detail__versions {
+    text-align: center; }
+
+.game-detail--no-features.game-detail--portrait .game-detail__items {
+  margin-top: 50px; }
+.game-detail--no-features.game-detail--portrait .game-detail__versions {
+  text-align: center; }
+
 .portfolio-box {
   background-size: cover;
   background-position: center center;
