@@ -1,0 +1,36 @@
+{% comment %}
+  # Parameters
+
+    layout.show_header : true or false
+    layout.show_footer : true or false
+{% endcomment %}
+
+{% assign show_footer = true %}
+{% if layout.show_footer %}
+  {% assign show_footer = layout.show_footer %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+  {%
+    include nav.html
+      header_visible=layout.show_header
+  %}
+  {% if layout.show_header %}
+    {% include header.html %}
+  {% endif %}
+
+  {{ content }}
+
+  {% if show_footer %}
+    {% include footer.html %}
+  {% endif %}
+
+  {% include scripts.html %}
+</body>
+
+</html>

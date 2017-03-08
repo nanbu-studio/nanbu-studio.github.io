@@ -1,0 +1,91 @@
+{% capture features_html %}
+  <div class="game-detail__items container-fluid">
+    {% comment %}
+      <div class="row">
+          <div class="col-md-6">
+              <div class="game-item">
+                  <i class="icon-screen-smartphone text-primary"></i>
+                  <h3>{{ page.genre }}</h3>
+                  <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="game-item">
+                  <i class="icon-camera text-primary"></i>
+                  <h3>Flexible Use</h3>
+                  <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="game-item">
+                  <i class="icon-present text-primary"></i>
+                  <h3>Free to Use</h3>
+                  <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="game-item">
+                  <i class="icon-lock-open text-primary"></i>
+                  <h3>Open Source</h3>
+                  <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  {% endcomment %}
+  {% if page.downloads %}
+    <div class="row">
+      <div class="col-xs-12 game-detail__versions">
+        <h3>Test our latest development build!</h3>
+        {% for option in page.downloads %}
+        <a href="{% if option[1].internal %}/games/{{page.handle}}/{% endif %}{{option[1].url}}"
+        class="download-button download-button--{{option[0]}}"></a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+{% endcapture %}
+
+{% capture device_html %}
+  <div class="device-container device-container--vspacing">
+      <div class="device-mockup iphone6_plus {{page.orientation}} white">
+          <div class="device">
+              <div class="screen">
+                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                  <img src="/games/{{ page.handle }}/{{ page.device_image }}" class="img-responsive" alt=""> </div>
+              <div class="button">
+                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+              </div>
+          </div>
+      </div>
+  </div>
+{% endcapture %}
+
+  <section class="game-detail game-detail--{{page.orientation}} game-detail--no-features">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <div class="section-heading">
+                      <h2>{{ page.title }}</h2>
+                      <p class="text-muted">{{ page.abstract }}</p>
+                      <hr>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-push-1">
+              {{ device_html }}
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-xs-12 col-md-10 col-md-push-1">
+                {{ features_html }}
+              </div>
+
+          </div>
+  </section>
