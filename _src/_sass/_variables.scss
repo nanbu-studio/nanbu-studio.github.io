@@ -1,7 +1,7 @@
 $head-pattern   : 'assets/images/bg-pattern-white.png';
 //$head-pattern    : nil;
 
-$color-orange : #F99B19;
+$color-orange : #F5A718;
 $color-green  : #66BD4A;
 
 
@@ -13,7 +13,3 @@ $theme-dark      : #222;
 
 $head-primary    : lighten($theme-primary, 10%);
 $head-secondary  : darken($theme-primary, 5%);
-
-$theme-primary   : #fdcc52;
-$theme-secondary : #fdc539;
-$theme-dark      : #222;

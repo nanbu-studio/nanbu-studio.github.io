@@ -110,7 +110,14 @@ p {
   }
 }
 
-@media (min-width: 768px) {
+@include mobile {
+  .navbar-header a.navbar-brand,
+  .navbar-header .navbar-brand {
+    font-weight: 500 !important;
+  }
+}
+
+@include desktop {
   .navbar-default {
     background-color: transparent;
     border-color: transparent;
@@ -153,6 +160,9 @@ p {
     }
   }
 }
+
+
+
 
 .navbar-opaque {
   &.affix-top {
@@ -711,10 +721,16 @@ body {
   width: 202.5px;
   height: 60px;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
 }
 
 .download-button--android {
   background-image: url('/img/badges/android-badge.svg');
+}
+
+.download-button--google-play {
+  background-image: url('/img/badges/google-play-badge.png');
 }
 
 .game-detail__versions {
@@ -732,4 +748,19 @@ body {
   .game-detail__versions {
     text-align: center;
   }
+}
+
+.navbar-dark {
+  .nav, .nav a {
+    color: white !important;
+  }
+
+  .navbar-toggle {
+    color: white !important;
+  }
+}
+
+.subtitle {
+  margin-top: -16px;
+  margin-bottom: 6px;
 }

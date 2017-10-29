@@ -9,7 +9,8 @@ genre: Casual
 featured_image: 'cover.png'
 device_image: 'cover.png'
 orientation: landscape
-
+status: prototype
+status_id: 5
 downloads:
   android:    
     url: 'dont-wake-up.apk'

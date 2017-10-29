@@ -29,7 +29,8 @@
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter">
-          {% for game in site.games %}
+          {% assign games = site.games | sort: 'status_id' %}
+          {% for game in games  %}
             {% include portfolio__game.html game=game %}
           {% endfor %}
         </div>

@@ -39,9 +39,21 @@
     <div class="row">
       <div class="col-xs-12 game-detail__versions">
         <h3>Test our latest development build!</h3>
+        <p>This game status is <strong>{{ page.status }}</strong>.
+        {% if page.status_id >= 5 %}
+          This is a very early stage of development. Be aware there will be tons of bug and features won't work as expected.
+        {% elsif page.status_id == 4 %}
+          You will have a strong idea of what the game will be like but you will experience bugs and some features might not work.
+        {% elsif page.status_id == 3 %}
+          This is a nearly finished version of the game. You may find a bug here and there but you should be able to play it through and enjoy the experience.
+        {% else %}
+          This version is totally playable. Enjoy yourself.
+        {% endif %}
+        </p>
         {% for option in page.downloads %}
-        <a href="{% if option[1].internal %}/games/{{page.handle}}/{% endif %}{{option[1].url}}"
-        class="download-button download-button--{{option[0]}}"></a>
+          <a href="{% if option[1].internal %}/games/{{page.handle}}/{% endif %}{{option[1].url}}"
+            {% if option[1].internal %}target="self"{% else %}target="_blank"{% endif %}
+            class="download-button download-button--{{option[0]}}"></a>
         {% endfor %}
       </div>
     </div>
@@ -69,6 +81,7 @@
               <div class="col-lg-12 text-center">
                   <div class="section-heading">
                       <h2>{{ page.title }}</h2>
+                      <p class="subtitle">&lt;{{ page.status | capitalize }}&gt;</p>
                       <p class="text-muted">{{ page.abstract }}</p>
                       <hr>
                   </div>
