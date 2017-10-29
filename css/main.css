@@ -24,7 +24,7 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #fdcc52; }
+  color: #F5A718; }
   a:hover, a:focus {
     color: #fcbd20; }
 
@@ -59,7 +59,7 @@ p {
     font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px;
-    color: #fdcc52; }
+    color: #F5A718; }
     .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
       color: #fcbd20; }
   .navbar-default .navbar-header .navbar-toggle {
@@ -75,16 +75,20 @@ p {
     .navbar-default .nav > li > a:focus {
       color: #222222; }
     .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
-      color: #fdcc52; }
+      color: #F5A718; }
   .navbar-default .nav > li.active > a {
-    color: #fdcc52 !important;
+    color: #F5A718 !important;
     background-color: transparent; }
     .navbar-default .nav > li.active > a:focus {
-      color: #fdcc52 !important;
+      color: #F5A718 !important;
       background-color: transparent; }
     .navbar-default .nav > li.active > a:hover, .navbar-default .nav > li.active > a:focus:hover {
       background-color: transparent; }
 
+@media (max-width: 767px) {
+  .navbar-header a.navbar-brand,
+  .navbar-header .navbar-brand {
+    font-weight: 500 !important; } }
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
@@ -107,13 +111,13 @@ p {
       .navbar-default.affix .navbar-header .navbar-brand {
         color: #222222; }
         .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus {
-          color: #fdcc52; }
+          color: #F5A718; }
       .navbar-default.affix .nav > li > a {
         color: #222222; }
         .navbar-default.affix .nav > li > a:focus {
           color: #222222; }
         .navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover {
-          color: #fdcc52; } }
+          color: #F5A718; } }
 .navbar-opaque.affix-top {
   background-color: #333; }
 
@@ -122,11 +126,11 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background: url("../assets/images/bg-pattern-white.png"), #fab14b;
+  background: url("../assets/images/bg-pattern-white.png"), #f7ba49;
   /* fallback for old browsers */
-  background: url("../assets/images/bg-pattern-white.png"), -webkit-linear-gradient(to left, #fab14b, #f28f06);
+  background: url("../assets/images/bg-pattern-white.png"), -webkit-linear-gradient(to left, #f7ba49, #e99b0a);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../assets/images/bg-pattern-white.png"), linear-gradient(to left, #fab14b, #f28f06);
+  background: url("../assets/images/bg-pattern-white.png"), linear-gradient(to left, #f7ba49, #e99b0a);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white; }
   header .header-content {
@@ -204,8 +208,8 @@ section {
       font-size: 30px; }
     section.game-detail .game-item i {
       font-size: 80px;
-      background: -webkit-linear-gradient(to left, #fab14b, #f28f06);
-      background: linear-gradient(to left, #fab14b, #f28f06);
+      background: -webkit-linear-gradient(to left, #f7ba49, #e99b0a);
+      background: linear-gradient(to left, #f7ba49, #e99b0a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
   section.game-detail--portrait .section-heading {
@@ -243,8 +247,8 @@ section {
       font-size: 30px; }
     section.features .feature-item i {
       font-size: 80px;
-      background: -webkit-linear-gradient(to left, #fab14b, #f28f06);
-      background: linear-gradient(to left, #fab14b, #f28f06);
+      background: -webkit-linear-gradient(to left, #f7ba49, #e99b0a);
+      background: linear-gradient(to left, #f7ba49, #e99b0a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
   section.cta {
@@ -391,12 +395,12 @@ footer {
         text-decoration: none; }
 
 .bg-primary {
-  background: #fdcc52;
-  background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#fdcc52, #fdc539); }
+  background: #F5A718;
+  background: -webkit-linear-gradient(#F5A718, #F5A718);
+  background: linear-gradient(#F5A718, #F5A718); }
 
 .text-primary {
-  color: #fdcc52; }
+  color: #F5A718; }
 
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -408,8 +412,8 @@ footer {
   border: 1px solid; }
   .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
     color: white;
-    background-color: #fdcc52;
-    border-color: #fdcc52; }
+    background-color: #F5A718;
+    border-color: #F5A718; }
 
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
@@ -493,10 +497,15 @@ body {
   display: inline-block;
   width: 202.5px;
   height: 60px;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .download-button--android {
   background-image: url("/img/badges/android-badge.svg"); }
+
+.download-button--google-play {
+  background-image: url("/img/badges/google-play-badge.png"); }
 
 .game-detail__versions {
   text-align: right; }
@@ -507,6 +516,15 @@ body {
   margin-top: 50px; }
 .game-detail--no-features.game-detail--portrait .game-detail__versions {
   text-align: center; }
+
+.navbar-dark .nav, .navbar-dark .nav a {
+  color: white !important; }
+.navbar-dark .navbar-toggle {
+  color: white !important; }
+
+.subtitle {
+  margin-top: -16px;
+  margin-bottom: 6px; }
 
 .portfolio-box {
   background-size: cover;
@@ -519,7 +537,7 @@ body {
     color: white;
     opacity: 0;
     display: block;
-    background: rgba(253, 204, 82, 0.9);
+    background: rgba(245, 167, 24, 0.9);
     position: absolute;
     bottom: 0;
     text-align: center;
