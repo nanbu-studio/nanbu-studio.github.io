@@ -31,7 +31,10 @@
         <div class="row no-gutter">
           {% assign games = site.games | sort: 'status_id' %}
           {% for game in games  %}
-            {% include portfolio__game.html game=game %}
+            {% if game.private %}
+            {% else %}
+              {% include portfolio__game.html game=game %}
+            {% endif %}
           {% endfor %}
         </div>
     </div>
