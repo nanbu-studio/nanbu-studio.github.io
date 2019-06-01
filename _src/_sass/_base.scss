@@ -171,15 +171,16 @@ p {
 }
 
 header {
+  $gradient-direction: -45deg;
   position: relative;
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
   background: url("../#{$head-pattern}"), $head-primary;
   /* fallback for old browsers */
-  background: url("../#{$head-pattern}"), -webkit-linear-gradient(to left, $head-primary, $head-secondary);
+  background: url("../#{$head-pattern}"), -webkit-linear-gradient($gradient-direction, $head-primary 0%, $head-secondary 90%, $head-secondary 100%);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../#{$head-pattern}"), linear-gradient(to left, $head-primary, $head-secondary);
+  background: url("../#{$head-pattern}"), linear-gradient($gradient-direction, $head-primary 0%, $head-secondary 90%, $head-secondary 100%);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
   .header-content {
@@ -239,6 +240,27 @@ header {
       max-width: none;
       max-height: calc(0vh);
       margin: 100px auto 0;
+    }
+  }
+}
+
+.device__screen-link {
+  display: block;
+  line-height: 0;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: white;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover {
+    &:after {
+      opacity: 0.3;
     }
   }
 }
@@ -372,7 +394,7 @@ section {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    background-image: url('../img/bg-cta.jpg');
+    background-image: url('../img/team.jpg');
     padding: 250px 0;
     .cta-content {
       position: relative;
@@ -436,6 +458,7 @@ section {
       margin-bottom: 0;
       li {
         a {
+          position: relative;
           display: block;
           height: 80px;
           width: 80px;
@@ -443,30 +466,40 @@ section {
           font-size: 40px;
           border-radius: 100%;
           color: white;
+          overflow: hidden;
+
+          i {
+            position: relative;
+            z-index: 2;
+          }
+
+          &:after {
+            position: absolute;
+            content: '';
+            pointer-events: none;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background-color: black;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+          }
+          &:hover {
+            &:after {
+              opacity: 0.5;
+            }
+          }
         }
         &.social-github a {
           background-color: #333;
-          &:hover {
-            background-color: #1E2327;
-          }
         }
         &.social-twitter a {
           background-color: #1da1f2;
-          &:hover {
-            background-color: #0d95e8;
-          }
         }
         &.social-facebook a {
           background-color: #3b5998;
-          &:hover {
-            background-color: #344e86;
-          }
         }
         &.social-google-plus a {
           background-color: #dd4b39;
-          &:hover {
-            background-color: #d73925;
-          }
         }
       }
     }
@@ -507,7 +540,7 @@ section {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/bg-cta.jpg');
+  background-image: url('../img/team.jpg');
   padding: 250px 0;
   &__content {
     position: relative;
@@ -523,7 +556,8 @@ section {
   .overlay {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.0) 55%);
     position: absolute;
     top: 0;
     left: 0;

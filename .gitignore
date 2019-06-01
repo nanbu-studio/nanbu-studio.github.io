@@ -1,4 +1,8 @@
 node_modules/
 _src/_site
+_src/vendor/bundle
+_src/.bundle
+_src/yarn.lock
+_src/Gemfile.lock
 _site
 *.*~

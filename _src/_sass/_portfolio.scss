@@ -5,7 +5,8 @@
   background-position: center center;
   position: relative;
   display: block;
-  max-width: 650px;
+  max-width: 100%;
+  padding-bottom: 9/16 * 100%;
   margin: 0 auto;
 
   .portfolio-box-caption {
@@ -47,11 +48,10 @@
   }
 
   @include mobile {
-    height: 300px;
+
   }
 
   @include desktop {
-    height: 300px;
 
     .portfolio-box-caption {
       .portfolio-box-caption-content {

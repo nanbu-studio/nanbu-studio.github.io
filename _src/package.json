@@ -5,6 +5,10 @@
   "version": "3.3.7",
   "homepage": "https://github.com/organizations/nanbu-studio",
   "author": "Start Bootstrap",
+  "scripts": {
+    "start": "bundle exec jekyll serve",
+    "preinstall": "bundle install --path vendor/bundle"
+  },
   "license": {
     "type": "MIT",
     "url": "https://github.com/organizations/nanbu-studio/blob/master/LICENSE"

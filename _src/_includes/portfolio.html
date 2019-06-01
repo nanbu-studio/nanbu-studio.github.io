@@ -29,9 +29,10 @@
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter">
+
           {% assign games = site.games | sort: 'status_id' %}
           {% for game in games  %}
-            {% if game.private %}
+            {% if game.hidden or game.handle == null %}
             {% else %}
               {% include portfolio__game.html game=game %}
             {% endif %}

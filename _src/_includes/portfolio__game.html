@@ -1,5 +1,9 @@
-<div class="col-lg-4 col-sm-6">
-    {% assign background_image = '/games/' | append: include.game.handle | append: '/' | append: include.game.featured_image %}
+<div class="col-sm-4 col-xs-12">
+    {% if include.game.featured_image %}
+      {% assign background_image = '/games/' | append: include.game.handle | append: '/' | append: include.game.featured_image %}
+    {% else %}
+      {% assign background_image = '/img/game-no-image.png' %}
+    {% endif %}
     <a class="portfolio-box" style="background-image: url({{ background_image }})"
        href="/games/{{include.game.handle}}">
         <div class="portfolio-box-caption">

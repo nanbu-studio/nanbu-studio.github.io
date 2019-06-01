@@ -1,6 +1,6 @@
 ---
 layout: game-detail
-private: true
+hidden: true
 handle: bdash
 title: BDash
 abstract: Beat the maze... fast!
