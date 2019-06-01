@@ -750,6 +750,13 @@ body {
   }
 }
 
+.header--page {
+  min-height: auto;
+  .post-heading {
+    padding: 120px 0px 80px 0px;
+  }
+}
+
 .download-button {
   display: inline-block;
   width: 202.5px;
