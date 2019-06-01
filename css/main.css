@@ -523,6 +523,11 @@ body {
     font-size: 55px; }
   .intro-header .post-heading .subheading {
     font-size: 30px; } }
+.header--page {
+  min-height: auto; }
+  .header--page .post-heading {
+    padding: 120px 0px 80px 0px; }
+
 .download-button {
   display: inline-block;
   width: 202.5px;
